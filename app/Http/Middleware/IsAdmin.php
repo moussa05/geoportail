@@ -20,6 +20,6 @@ class IsAdmin
             return $next($request);
         }
         return redirect('/login')->with('error', "Vous n'avez pas l'autorisation.");
-        
+
     }
 }
