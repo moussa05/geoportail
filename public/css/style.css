@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-width: 70px;
+    margin: 4px;
+}
+
+.map-container {
+    position: relative;
+}
+
+.map-image {
+    width: 100%;
+    max-height: 260px; /* Ajustez cette valeur selon vos besoins */
+    object-fit: cover; /* Maintient les proportions de l'image */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.map-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%; /* Adjust text container for small screens */
+}
+
+.map-text p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.login-box {
+    width: 495px;
+    border-radius: 10px;
+}
+
+.login-box p {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.input-group label {
+    width: 140px;
+    text-align: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: calc(100% - 120px); /* La largeur des inputs est calculée en fonction de l'espace restant */
+    height: 42px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 1024px) {
+   
+    .login-box {
+        padding: 20px;
+        margin-left: 40px;
+        /* border: 1px solid #ccc; */
+        border-radius: 10px;
+        /* background-color: #f9f9f9; */
+    }
+    
+
+    
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 120px; /* Reduce logo size on smaller screens */
+    }
+
+    .map-text p {
+        font-size: 1em; /* Reduce text size for readability */
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 90%; /* Make input fields expand with screen size */
+    }
+    .login-box {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .input-group {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    button {
+        width: 90%; /* Make button responsive */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .map-text {
+        width: 95%; /* Adjust text container for very small screens */
+    }
+
+    .map-text p {
+        font-size: 0.9em; /* Reduce font size for very small screens */
+    }
+
+    .login-box p {
+        font-size: 1em; /* Adjust login box text size */
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%; /* Full-width inputs on small screens */
+    }
+
+    button {
+        width: 100%; /* Full-width button on small screens */
+    }
+}
